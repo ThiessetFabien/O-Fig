@@ -57,7 +57,7 @@ main {
 }
 
 figure {
-    padding: 8px;
+    padding: 4px;
     border: 2px solid #ccc;
     max-width: 250px;
     
@@ -95,19 +95,20 @@ article p {
     color: #fff;
 
     margin-top: 16px;
-    padding: 16px;
+    padding: 16px 0;
     
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
+}
+.solde h4 {
+    font-weight: 700;
 }
 
-.solde h4 {
+.solde h4 span{
     text-decoration: line-through;
 }
 
-.solde h5 {
-    font-weight: 700;
-}
 
 .copyright {
     margin-bottom: 2px;
