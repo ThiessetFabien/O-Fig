@@ -1,33 +1,19 @@
-/* raleway-300italic - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'RalewayItalic';
-    font-style: italic;
-    font-weight: 300;
-    src: url('../fonts/raleway-v29-latin-300italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* raleway-regular - latin */
   @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'RalewayNormal';
+    font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
     src: url('../fonts/raleway-v29-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* raleway-700 - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'RalewayBold';
-    font-style: normal;
-    font-weight: 700;
-    src: url('../fonts/raleway-v29-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
 
 * {
     margin: 0;
 }
 
-header {
+body {
+    font-family: 'Raleway';
+}
+
+.header {
     padding: 16px;
 
     display: flex;
@@ -37,19 +23,32 @@ header {
 
     background: #c80000;
     color: #fff;
+    font-weight: 700;
 }
 
-header h1 {
-    font-family: 'RalewayBold', sans-serif;
+.header h1 {
     font-size: xx-large;
 }
 
-header p {
+.header p {
 padding: 0 8px;
 
     font-size: small;
 }
 
-nav {
+.navbar {
+    padding: 16px 0 8px;
+
+    background: #666;
+    color: #fff;
     text-align: center;
+}
+
+.navbar h2 {
+    font-size: small;
+}
+
+.navbar h2 span{
+    font-style: italic;
+    font-size: large;
 }
