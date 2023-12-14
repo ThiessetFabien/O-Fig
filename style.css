@@ -48,12 +48,12 @@ padding: 0 8px;
 }
 
 main {
-    margin: 24px;
+    margin: 24px 118px;
 
     min-height: 100%;
 
     display: flex ;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 figure {
