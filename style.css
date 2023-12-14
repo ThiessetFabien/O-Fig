@@ -5,7 +5,14 @@
     src: url('../fonts/raleway-v29-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
 
+html {
+    background-color: #c80000;
+}
+
 body {
+    background-color: #fff;
+    border: 1px solid #ccc;
+
     font-family: 'Raleway';
 
     margin: auto;
@@ -63,11 +70,10 @@ main {
     flex-flow: row wrap;
 }
 
-figure {
+article {
     padding: 4px;
     border: 2px solid #ccc;
     max-width: 250px;
-    
 }
 
 article img {
