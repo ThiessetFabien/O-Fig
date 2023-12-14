@@ -54,10 +54,9 @@ main {
 
     display: flex ;
     justify-content: center;
-    gap: 16px;
+    gap: 8px 16px;
 
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
 }
 
 figure {
@@ -99,11 +98,11 @@ article p {
     color: #fff;
 
     margin-top: 16px;
-    padding: 16px 0;
+    padding: 16px;
     
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 .solde h4 {
     font-weight: 700;
@@ -111,12 +110,17 @@ article p {
 
 .solde h4 span{
     text-decoration: line-through;
+    font-weight: 300;
+    font-size: small;
 }
 
+.order1 {
+    order: 1;
+}
 
 .copyright {
     margin-bottom: 2px;
-    padding: 8px;
+    padding: 16px;
 
     background: #666;
     color: #fff;
