@@ -8,6 +8,10 @@
 body {
     font-family: 'Raleway';
 
+    margin: auto;
+
+    width: 920px;
+
     display: flex;
     flex-direction: column;
 }
@@ -35,7 +39,7 @@ padding: 0 8px;
 }
 
 .navbar {
-    padding: 16px 0 8px;
+    padding: 8px 0;
 
     background: #666;
     color: #fff;
@@ -114,8 +118,20 @@ article p {
     font-size: small;
 }
 
-.order1 {
-    order: 1;
+article.order1 {
+    order: -4;
+}
+
+article.order2 {
+    order: -3;
+}
+
+article.order3 {
+    order: -2;
+}
+
+article.order4 {
+    order: -1;
 }
 
 .copyright {
