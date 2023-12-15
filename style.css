@@ -103,9 +103,12 @@ article p {
     font-size: small;
 }
 
-.solde {
+button {
     background: #c80000;
     color: #fff;
+    border: 0px;
+
+    width: 100%;
 
     margin-top: 16px;
     padding: 16px;
@@ -114,11 +117,11 @@ article p {
     align-items: center;
     justify-content: space-between;
 }
-.solde h4 {
+button h4 {
     font-weight: 700;
 }
 
-.solde h4 span{
+button h4 span{
     text-decoration: line-through;
     font-weight: 300;
     font-size: small;
