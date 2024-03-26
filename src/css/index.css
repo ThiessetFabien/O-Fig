@@ -9,7 +9,7 @@
 
   --font-sans: 'Raleway', sans-serif;
 
-  --gutter: 2.4rem;
+  --gutter: 0.8rem;
 }
 
 html {
@@ -18,12 +18,47 @@ html {
 
 .shop {
   font-family: var(--font-sans);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.shop__header {
+.shop-header {
   background: var(--color-primary);
+  color: var(--color-lightest);
+  padding: calc(var(--gutter) * 2);
+  font-weight: 700;
 }
 
-.site__credits {
+.shop-header__subtitle {
+  font-size: 1.2rem;
+}
+
+.shop-header__title {
+  font-size: 2.4rem;
+  padding: calc(var(--gutter) * 3);
+}
+
+.shop-main {
+  flex-grow: 1;
+}
+
+.shop-main__title {
+  font-size: 1.2rem;
+  padding: calc(var(--gutter) * 3);
+}
+
+.shop-main__subtitle {
+  font-style: italic;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.shop-credits,
+.shop-main__title {
   background: var(--color-secondary);
+  color: var(--color-lightest);
+  margin-bottom: 0;
+  padding: var(--gutter);
+  text-align: center;
 }
