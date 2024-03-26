@@ -1,0 +1,29 @@
+:root {
+  --color: #000;
+  --color-primary: #c80000;
+  --color-secondary: #666;
+  --color-light: #dadada;
+
+  --color-darkest: #111;
+  --color-lightest: #fff;
+
+  --font-sans: 'Raleway', sans-serif;
+
+  --gutter: 2.4rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.shop {
+  font-family: var(--font-sans);
+}
+
+.shop__header {
+  background: var(--color-primary);
+}
+
+.site__credits {
+  background: var(--color-secondary);
+}
