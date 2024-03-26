@@ -46,12 +46,76 @@ html {
 .shop-main__title {
   font-size: 1.2rem;
   padding: calc(var(--gutter) * 3);
+  font-weight: 300;
 }
 
 .shop-main__subtitle {
   font-style: italic;
   font-size: 1.6rem;
-  font-weight: 300;
+}
+
+.shop-main__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: calc(var(--gutter) * 2) auto;
+  row-gap: calc(var(--gutter) * 4);
+  width: 90vw;
+}
+
+.card {
+  border: 1px solid var(--color-light);
+  display: block;
+  padding: var(--gutter);
+  overflow: hidden;
+  width: 30%;
+}
+
+.card__header {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__title {
+  border-top: 1px solid var(--color-secondary);
+  font-size: 2.4rem;
+  font-weight: 700;
+  order: 1;
+  padding: var(--gutter) 0;
+}
+
+.card__description {
+  font-size: 1.4rem;
+  padding-bottom: calc(var(--gutter) * 2);
+}
+
+.card__tag {
+  color: var(--color-secondary);
+  font-weight: 700;
+  padding: calc(var(--gutter) / 2);
+  text-transform: uppercase;
+}
+
+.card__add-to-bag {
+  align-items: center;
+  background: var(--color-primary);
+  color: var(--color-lightest);
+  display: flex;
+  justify-content: space-between;
+  padding: var(--gutter);
+  text-decoration: none;
+}
+
+.card__price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: var(--gutter);
+}
+
+.card__price--strike {
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-decoration: line-through;
 }
 
 .shop-credits,
