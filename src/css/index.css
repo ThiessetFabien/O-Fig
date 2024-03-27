@@ -197,16 +197,6 @@ html {
   }
 }
 
-@media (orientation: landscape) {
-  .shop-header {
-    padding: 0;
-  }
-
-  .shop-main__title {
-    top: 7.2rem;
-  }
-}
-
 @media (orientation: landscape) and (min-width: 768px) {
   .shop-header {
     padding: calc(var(--gutter) * 2);
