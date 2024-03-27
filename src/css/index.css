@@ -1,0 +1,246 @@
+:root {
+  --color: #000;
+  --color-primary: #c80000;
+  --color-secondary: #666;
+  --color-light: #dadada;
+  --color-darkest: #111;
+  --color-lightest: #fff;
+  --font-sans: 'Raleway', Helvetica, sans-serif;
+  --gutter: 0.8rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.shop {
+  background: var(--color-lightest);
+  display: flex;
+  font-family: var(--font-sans);
+  flex-direction: column;
+  margin: auto;
+  min-height: 100vh;
+  max-width: 948px;
+}
+
+.shop-header {
+  background: var(--color-primary);
+  color: var(--color-lightest);
+  padding: calc(var(--gutter) * 2);
+  position: sticky;
+  font-weight: 700;
+  top: 0;
+  z-index: 1;
+}
+
+.shop-header__subtitle {
+  font-size: 1.2rem;
+}
+
+.shop-header__title {
+  font-size: 2.4rem;
+  padding: calc(var(--gutter) * 3);
+}
+
+.shop-main {
+  flex-grow: 1;
+}
+
+.shop-main__title {
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding: calc(var(--gutter) * 3);
+  position: sticky;
+  top: 9.6rem;
+  z-index: 1;
+}
+
+.shop-main__subtitle {
+  font-style: italic;
+  font-size: 1.4rem;
+}
+
+.shop-main__sales {
+  background: var(--color-primary);
+  border-radius: 0 0.8rem 0.8rem 0;
+  color: var(--color-lightest);
+  display: block;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: var(--gutter);
+  position: fixed;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 2.4rem;
+  word-break: break-all;
+  top: 33vh;
+  z-index: 1;
+}
+
+.shop-main__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: calc(var(--gutter) * 2) auto;
+  row-gap: calc(var(--gutter) * 4);
+  width: 90vw;
+}
+
+.card {
+  border: 0.1rem solid var(--color-light);
+  display: block;
+  padding: var(--gutter);
+  position: relative;
+  width: 30%;
+}
+
+.card__header {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__title {
+  border-top: 0.1rem solid var(--color-secondary);
+  font-size: 2.4rem;
+  font-weight: 700;
+  order: 1;
+  padding: var(--gutter) 0;
+}
+
+.card__description {
+  flex-grow: 1;
+  font-size: 1.4rem;
+  padding-bottom: calc(var(--gutter) * 2);
+}
+
+.card__sale {
+  align-items: center;
+  background: var(--color-secondary);
+  border: 0.4rem solid var(--color-light);
+  border-radius: 50%;
+  color: var(--color-lightest);
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: 700;
+  height: 4.8rem;
+  justify-content: center;
+  position: absolute;
+  right: 1.6rem;
+  top: 1.6rem;
+  width: 4.8rem;
+}
+
+.card__tag {
+  color: var(--color-secondary);
+  font-weight: 700;
+  padding: calc(var(--gutter) / 2);
+  text-transform: uppercase;
+}
+
+.card__add-to-bag {
+  align-items: center;
+  background: var(--color-primary);
+  color: var(--color-lightest);
+  display: flex;
+  justify-content: space-between;
+  padding: var(--gutter);
+  text-decoration: none;
+}
+
+.card__price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: var(--gutter);
+}
+
+.card__price--strike {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+
+.shop-credits,
+.shop-main__title {
+  background: var(--color-secondary);
+  color: var(--color-lightest);
+  margin-bottom: 0;
+  padding: var(--gutter);
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .card__price {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4rem;
+  }
+
+  .card__price--strike {
+    font-size: 1rem;
+  }
+
+  .card__add-to-bag {
+    min-height: 6.6rem;
+  }
+}
+
+@media (orientation: landscape) {
+  .shop-header {
+    padding: 0;
+  }
+
+  .shop-header__title {
+    padding: calc(var(--gutter));
+  }
+
+  .shop-main__title {
+    top: 4rem;
+  }
+}
+
+@media (orientation: landscape) {
+  .shop-header {
+    padding: 0;
+  }
+
+  .shop-header__title {
+    padding: calc(var(--gutter));
+  }
+
+  .shop-main__title {
+    top: 4rem;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 768px) {
+  .shop-header {
+    padding: calc(var(--gutter) * 2);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .card {
+    width: calc((100% - var(--gutter) * 4) / 2);
+  }
+
+  .card__price {
+    font-size: 1.2rem;
+  }
+
+  .card__price--strike {
+    font-size: 0.8rem;
+  }
+
+  .card__sale {
+    height: 3.6rem;
+    right: 0.4rem;
+    top: 0.4rem;
+    width: 3.6rem;
+  }
+
+  .shop-main__sales {
+    padding: calc(var(--gutter) / 2);
+    width: 1.8rem;
+  }
+}
