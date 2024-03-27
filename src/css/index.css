@@ -89,7 +89,9 @@ html {
 
 .card {
   border: 0.1rem solid var(--color-light);
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: var(--gutter);
   position: relative;
   width: 30%;
@@ -138,13 +140,13 @@ html {
   text-transform: uppercase;
 }
 
-.card__add-to-bag {
+.card__add-to-cart {
   align-items: center;
   background: var(--color-primary);
   color: var(--color-lightest);
   display: flex;
   justify-content: space-between;
-  padding: var(--gutter);
+  padding: var(--gutter) var(--gutter) var(--gutter) calc(var(--gutter) * 2);
   text-decoration: none;
 }
 
@@ -192,7 +194,7 @@ html {
     font-size: 1rem;
   }
 
-  .card__add-to-bag {
+  .card__add-to-cart {
     min-height: 6.6rem;
   }
 }
