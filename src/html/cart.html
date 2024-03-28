@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>oFig - Panier</title>
+    <link rel="stylesheet" href="/src/css/reset.css" />
+    <link rel="stylesheet" href="/src/css/fonts.css" />
+    <link rel="stylesheet" href="/src/css/index.css" />
+  </head>
+
+  <body class="shop">
+    <header class="shop-header">
+      <h1 class="shop-header__title">
+        <a href="/index.html">oFig
+          <span class="shop-header__subtitle">Figurines et statuettes</span></a>
+      </h1>
+    </header>
+
+    <main class="cart-content">
+      <section class="delivery">
+        <h2 class="delivery__title">
+          Votre panier <span class="delivery__subtitle">2 produits</span>
+        </h2>
+
+        <form class="delivery-form">
+          <h3 class="delivery__preference-title">Votre panier</h3>
+          <div class="responsive-table-container">
+            <table class="delivery-form__cart">
+              <thead>
+                <tr>
+                  <th>Figurine</th>
+                  <th>Prix unitaire</th>
+                  <th>Quantité</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Cloud Strife</td>
+                  <td>59€</td>
+                  <td>
+                    <input type="number" id="quantity" name="quantity" /><button
+                      class="delivery-form__cart-remove">
+                      supprimer
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Tifa Lockhart</td>
+                  <td>69€</td>
+                  <td>
+                    <input type="number" id="quantity" name="quantity" /><button
+                      class="delivery-form__cart-remove">
+                      supprimer
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Barret Wallace</td>
+                  <td>69€</td>
+                  <td>
+                    <input type="number" id="quantity" name="quantity" /><button
+                      class="delivery-form__cart-remove">
+                      supprimer
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td class="delivery-form__cart-total-label" colspan="2">
+                    Total de la commande
+                  </td>
+                  <td class="delivery-form__cart-total-price">197€</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>          
+          <h3 class="delivery__preference-title">Préférences de livraison</h3>
+          <div class="delivery-form__preferences">
+            <div class="delivery-form__options-list">
+              <fieldset class="delivery-form__location">
+                <legend>Où souhaitez vous être livré ?</legend>
+                <div class="field">
+                  <label class="field__label">
+                    <input class="field__radio" type="radio" name="location" />
+                    Mon adresse courante
+                  </label>
+                </div>
+                <div class="field">
+                  <label class="field__label">
+                    <input
+                      checked
+                      class="field__radio"
+                      type="radio"
+                      name="location" />
+                    Autre adresse
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset class="delivery-form__options">
+                <legend>Options</legend>
+                <div class="field">
+                  <label class="field__label">
+                    <input 
+                      class="field__checkbox" 
+                      type="checkbox" 
+                      name="tracker" 
+                      checked
+                    />
+                    Suivi de livraison par sms
+                  </label>
+                </div>
+                <div class="field">
+                  <label class="field__label">
+                    <input
+                      class="field__checkbox"
+                      type="checkbox"
+                      name="refund" />
+                    Satisfait ou remboursé (+ 2 euros)
+                  </label>
+                </div>
+                <div class="field">
+                  <label class="field__label">
+                    <input
+                      class="field__checkbox"
+                      type="checkbox"
+                      name="warranty" />
+                    Garantie 2 ans (+ 10 euros)
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="delivery-form__address">
+              <fieldset class="delivery-form__current-address">
+                <legend>Adresse</legend>
+                <div class="field">
+                  <label class="field__label" for="street-input">
+                    Rue
+                  </label>
+                  <input
+                    class="field__text"
+                    type="text"
+                    name="street"
+                    id="street-input"
+                    placeholder="6 rue des Merveilles"
+                    required
+                  />
+                </div>
+                <div class="field">
+                  <label class="field__label" for="zip-input">
+                    Code postal
+                  </label>
+                  <input
+                    class="field__text"
+                    type="text"
+                    name="zipcode"
+                    id="zip-input"
+                    pattern="[0-9]{5}"
+                    placeholder="77777"
+                    required 
+                  />
+                </div>
+                <div class="field">
+                  <label class="field__label" for="city-input">Ville</label>
+                  <input
+                    class="field__text"
+                    type="text"
+                    name="city"
+                    id="city-input"
+                    placeholder="Wonder Square"
+                    required
+                  />
+                </div>
+              </fieldset>
+              <fieldset class="delivery-form__informations">
+                <legend>Informations complémentaires</legend>
+                <div class="field">
+                  <label class="field__label" for="info-textarea">
+                    Interphone, bâtiment, etc...
+                  </label>
+                  <textarea
+                    class="field__textarea"
+                    name="informations"
+                    id="info-textarea">
+                  </textarea>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <div class="delivery-form__total-amount">
+            <span class="delivery-form__total-label">Montant total à régler</span>
+            <span class="delivery-form__total-price"> 197€ </span>
+          </div>
+          <div class="delivery-form__buttons">
+            <button class="delivery-form__continue-button">
+              Continuer vos achats
+            </button>
+            <button type="submit" class="delivery-form__submit-button">
+              Valider et payer
+            </button>
+          </div>
+        </form>
+      </section>
+      <div class="shop-main__sales">soldes</div>
+    </main>
+
+    <footer class="shop-credits">
+      <p class="shop-credits__text">
+        oFig - toutes les images sont sous copyright SquareEnix
+      </p>
+    </footer>
+  </body>
+</html>
