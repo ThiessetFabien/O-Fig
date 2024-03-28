@@ -82,7 +82,7 @@ html {
 .shop-main__cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin: calc(var(--gutter) * 4) auto;
   /* stylelint-disable property-no-unknown */
   row-gap: calc(var(--gutter) * 4);
