@@ -1,6 +1,6 @@
 :root {
   --color: #000;
-  --color-primary: #c80000;
+  --color-primary: #001781;
   --color-secondary: #666;
   --color-light: #dadada;
   --color-darkest: #111;
@@ -11,6 +11,7 @@
 
 html {
   font-size: 62.5%;
+  background: var(--color-darkest);
 }
 
 .shop,
@@ -349,6 +350,11 @@ html {
 
 .responsive-table-container {
   overflow-x: scroll;
+}
+
+.shop-credits {
+  border-image: url(/src/images/deco.png) 100% 0 0 0 / 12px 0 0 0 repeat;
+  padding-top: 2rem;
 }
 
 @media screen and (min-width: 425px) and (max-width: 768px) {
