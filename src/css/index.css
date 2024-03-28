@@ -26,6 +26,7 @@ html {
 .shop-header {
   background: var(--color-primary);
   color: var(--color-lightest);
+  height: 9.6rem;
   padding: calc(var(--gutter) * 2);
   position: sticky;
   font-weight: 700;
