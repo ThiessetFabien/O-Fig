@@ -54,7 +54,7 @@ html {
 
 .shop-main__title,
 .delivery__title {
-  font-size: 2.8rem;
+  font-size: 2rem;
   font-weight: 300;
   position: sticky;
   top: 9.6rem;
@@ -73,7 +73,6 @@ html {
 .shop-main__subtitle,
 .delivery__subtitle {
   font-style: italic;
-  font-size: 2.4rem;
 }
 
 .shop-main__sales {
@@ -106,9 +105,9 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin: calc(var(--gutter) * 4) auto;
+  margin: calc(var(--gutter) * 2) auto;
   /* stylelint-disable property-no-unknown */
-  row-gap: calc(var(--gutter) * 4);
+  row-gap: calc(var(--gutter) * 2);
 }
 
 .card {
@@ -116,7 +115,7 @@ html {
   border-radius: 0.8rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: var(--gutter);
   position: relative;
   width: 30%;
@@ -129,14 +128,14 @@ html {
 
 .card__title {
   border-top: 0.1rem solid var(--color-secondary);
-  font-size: 2.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
   order: 1;
   padding: var(--gutter) 0;
 }
 
 .card__description {
-  flex-grow: 1;
+  display: none;
   font-size: 1.2rem;
   padding-bottom: calc(var(--gutter) * 2);
 }
@@ -148,19 +147,19 @@ html {
   border-radius: 50%;
   color: var(--color-lightest);
   display: flex;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
   height: 4.8rem;
   justify-content: center;
   position: absolute;
-  right: 1.6rem;
-  top: 1.6rem;
+  right: 0.8rem;
+  top: 0.8rem;
   width: 4.8rem;
 }
 
 .card__tag {
   color: var(--color-secondary);
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-weight: 700;
   padding: calc(var(--gutter) / 2);
   text-transform: uppercase;
@@ -185,7 +184,7 @@ html {
 }
 
 .card__price {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
   padding: var(--gutter);
 }
@@ -379,56 +378,81 @@ html {
   padding-top: 2rem;
 }
 
-@media screen and (min-width: 425px) and (max-width: 768px) {
-  .shop-main__cards {
-    margin: calc(var(--gutter) * 2);
-    row-gap: calc(var(--gutter) * 2);
-
-    .card__price {
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      font-size: 1.4rem;
-    }
-
-    .card__price--strike {
-      font-size: 1rem;
-    }
-
-    .card__add-to-cart {
-      min-height: 6.6rem;
-    }
-  }
-}
-
-@media (orientation: landscape) and (min-width: 768px) {
-  .shop-header {
-    padding: calc(var(--gutter) * 2);
-  }
-}
-
 @media screen and (max-width: 425px) {
+  .shop-header__title {
+    font-size: 2.4rem;
+  }
+
+  .shop-main__title {
+    font-size: 1.6rem;
+  }
+
   .card {
     width: calc((100% - var(--gutter) * 4) / 2);
   }
 
+  .card__add-to-cart > span:first-child {
+    text-align: center;
+    width: 33%;
+  }
+
   .card__price {
+    display: flex;
+    flex-direction: column;
     font-size: 1.2rem;
+    text-align: center;
   }
 
   .card__price--strike {
-    font-size: 0.8rem;
-  }
-
-  .card__sale {
-    height: 3.6rem;
-    right: 0.4rem;
-    top: 0.4rem;
-    width: 3.6rem;
+    display: none;
   }
 
   .shop-main__sales {
     padding: calc(var(--gutter) / 2);
     width: 1.8rem;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 768px) {
+  .card__price {
+    font-size: 1.6rem;
+  }
+
+  .card__price--strike {
+    display: block;
+    font-size: 1rem;
+  }
+
+  .card__add-to-cart {
+    height: 6.6rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card__sale {
+    height: 6rem;
+    width: 6rem;
+  }
+
+  .card__title {
+    font-size: 2rem;
+  }
+
+  .card__description {
+    display: block;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 768px) {
+  .shop-header {
+    padding: calc(var(--gutter) * 2);
+  }
+
+  .card__price--strike {
+    display: none;
+  }
+
+  .card__description {
+    display: none;
   }
 }
