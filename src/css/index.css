@@ -187,6 +187,7 @@ html {
   font-size: 2rem;
   font-weight: 700;
   padding: var(--gutter);
+  outline: none !important;
 }
 
 .card__price--strike {
