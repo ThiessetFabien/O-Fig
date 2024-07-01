@@ -99,6 +99,7 @@ html {
   color: var(--color-primary);
   cursor: pointer;
   transition: background-color 0.3s linear, color 0.3s linear;
+  outline: none !important;
 }
 
 .shop-main__cards {
