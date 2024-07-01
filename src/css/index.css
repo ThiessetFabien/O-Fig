@@ -182,13 +182,13 @@ html {
   background: var(--color-lightest);
   color: var(--color-primary);
   cursor: pointer;
+  outline: none !important;
 }
 
 .card__price {
   font-size: 2rem;
   font-weight: 700;
   padding: var(--gutter);
-  outline: none !important;
 }
 
 .card__price--strike {
