@@ -375,6 +375,7 @@ html {
 
 .responsive-table-container {
   overflow-x: scroll;
+  overflow-y: scroll;
 }
 
 .shop-credits {
